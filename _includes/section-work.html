@@ -1,0 +1,45 @@
+{% if site.data.settings.work.enable == true %}
+<!-- begin works -->
+<div class="container">
+  <section class="section works animate">
+    <div class="row">
+
+      <div class="col col-4 col-d-12">
+        <div class="section__info">
+          <h2 class="section__title">{{ site.data.settings.work.work__title }}</h2>
+          {% if site.data.settings.work.work__description %}
+          <p class="section__description">{{ site.data.settings.work.work__description }}</p>
+          {% endif %}
+          <a href="{{ '/work' | relative_url }}" class="section__link">Show all works <i class="ion ion-md-arrow-forward"></i></a>
+        </div>
+      </div>
+
+      <div class="col col-8 col-d-12">
+        <div class="row">
+          {% assign sorted = site.works | sort: 'date' | reverse %}
+          {% for work in sorted limit:4 %}
+          <article class="work col col-6 col-d-12">
+            <div class="work__content">
+              <a href="{{ work.url }}" class="work__image">
+                <img class="lazy" data-src="{{ work.image }}" alt="{{ work.title }}">
+              </a>
+              <div class="work__info">
+                {% if work.category %}
+                <div class="work__category">{{ work.category }}</div>
+                {% endif %}
+                <h3 class="work__title"><a href="{{ work.url }}">{{ work.title }}</a></h3>
+                {% if work.description %}
+                <p class="work__description">{{ work.description }}</p>
+                {% endif %}
+              </div>
+            </div>
+          </article>
+          {% endfor %}
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div>
+<!-- end works -->
+{% endif %}

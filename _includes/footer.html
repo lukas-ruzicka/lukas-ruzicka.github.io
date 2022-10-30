@@ -1,0 +1,39 @@
+<!-- begin footer -->
+<footer class="footer">
+
+  <div class="footer__inner">
+
+    <div class="container">
+      <div class="footer__author">
+        <div class="footer__author-info">
+          <h3 class="footer__author-name">{{site.data.settings.author.author__name}}</h3>
+          {% if site.data.settings.social %}
+          <div class="social">
+            <ul class="social__list list-reset">
+              {% for social in site.data.settings.social %}
+              <li class="social__item">
+                <a class="social__link" href="{{social.link}}" target="_blank" rel="noopener"
+                  aria-label="Social link"><i class="ion {{social.icon}}"></i></a>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+          {% endif %}
+          <p class="footer__author-bio">{{site.data.settings.author.author__bio}}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bg lazy" data-bg="{{site.data.settings.footer__background__image}}"></div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+        <div class="copyright">{{site.time | date: '%Y'}} &copy; <a href="/">{{site.data.settings.title}}</a>. Published with <a href="https://jekyllrb.com/">Jekyll</a>. Crafted & Designed by <a href="https://jekyllthemes.io/developers/artem-sheludko">Artem Sheludko</a>.</div>
+      </div>
+    </div>
+  </div>
+
+</footer>
+<!-- end footer -->

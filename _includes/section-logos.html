@@ -1,0 +1,27 @@
+{% if site.data.settings.logos.enable == true %}
+<!-- begin logos -->
+<section class="section logos animate">
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+
+        <div class="section__info">
+          <h2 class="section__small__title">{{ site.data.settings.logos.logos__title }}</h2>
+        </div>
+
+        <ul class="logos__list list-reset">
+          {% for logo in site.data.settings.logo__items %}
+          <li class="logos__item">
+            <a href="{{ logo.link }}" class="logos__link" rel="noopener">
+              <img src="{{ logo.image }}" alt="{{ logo.name }}" class="logos__image">
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end logos -->
+{% endif %}

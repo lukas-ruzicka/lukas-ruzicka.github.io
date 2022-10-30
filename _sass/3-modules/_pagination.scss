@@ -1,0 +1,9 @@
+/* Pagination */
+.pagination {
+  margin-top: 60px;
+  text-align: center;
+
+  @media (max-width: $mobile) {
+    margin-top: 40px;
+  }
+}

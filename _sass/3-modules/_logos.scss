@@ -1,0 +1,43 @@
+/* Logos */
+.section.logos {
+  padding-top: 0;
+  border-top: none;
+}
+
+.logos__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: -$base-spacing-unit;
+}
+
+.logos__item {
+  padding: $base-spacing-unit;
+  margin-bottom: 0;
+}
+
+.logos__link {
+  display: block;
+  transition: all .2s ease;
+
+  &:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+.logos__image {
+  height: 36px;
+  filter: invert(51%) sepia(4%) saturate(1703%) hue-rotate(179deg) brightness(85%) contrast(89%);
+
+  @media (max-width: $mobile) {
+    height: 32px;
+  }
+}
+
+.dark-mode {
+  .logos__image {
+    filter: invert(100%) sepia(32%) saturate(304%) hue-rotate(200deg) brightness(115%) contrast(88%);
+  }
+}

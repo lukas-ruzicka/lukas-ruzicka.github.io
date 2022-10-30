@@ -1,0 +1,122 @@
+/* Work */
+.work-page {
+  margin-bottom: -32px;
+}
+
+.work-head {
+  margin-bottom: 60px;
+
+  .row {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (max-width: $desktop) {
+    margin-bottom: 32px;
+
+    .row .col:last-child {
+      order: -1;
+    }
+  }
+}
+
+.work-head__left {
+  .work-head__image {
+    position: relative;
+    transform: translate(0);
+    aspect-ratio: 1/1.2;
+    border-radius: $global-radius;
+    overflow: hidden;
+    background-color: var(--background-alt-color);
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      user-select: none;
+    }
+
+    @supports not (aspect-ratio: 1/1.2) {
+      padding-bottom: 120%;
+    }
+  }
+
+  @media (max-width: $desktop) {
+    .work-head__image {
+      aspect-ratio: 1/1;
+
+      @supports not (aspect-ratio: 1/1) {
+        padding-bottom: 100%;
+      }
+    }
+  }
+}
+
+.work-head__right {
+  margin-left: 40px;
+
+  @media (max-width: $desktop) {
+    margin-left: 0;
+    margin-bottom: 32px;
+  }
+}
+
+.work-meta {
+  margin-top: 16px;
+
+  .work-meta__item {
+    position: relative;
+    margin-bottom: 12px;
+    padding-left: 16px;
+    font-size: 18px;
+    color: var(--heading-font-color);
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: var(--primary-color);
+    }
+
+    strong {
+      display: inline-block;
+      width: 60px;
+      font-weight: 500;
+    }
+
+    span {
+      color: var(--text-alt-color);
+    }
+  }
+
+  @media (max-width: $mobile) {
+    .work-meta__item {
+      font-size: 16px;
+    }
+  }
+}
+
+.work-category {
+  margin-bottom: 4px;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--heading-font-color);
+
+  @media (max-width: $mobile) {
+    font-size: 16px;
+  }
+}
+
+/* Work Navigation */
+.work-navigation {
+  max-width: 840px;
+  margin: 0 auto;
+}

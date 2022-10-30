@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+<div class="container">
+  <div class="page-head">
+
+    <div class="page-info">
+      <h1 class="page-title">{{ page.title | escape }}</h1>
+      {% if page.description %}
+      <div class="page-description">{{ page.description }}</div>
+      {% endif %}
+    </div>
+
+    {%if page.image %}
+    <div class="page-image">
+      <img class="lazy" data-src="{{site.baseurl}}{{page.image}}" alt="{{page.title}}">
+    </div>
+    {% if page.image_caption %}
+    <div class="page-image-caption">{{ page.image_caption | markdownify | replace: '<p>' | replace: '</p>' }}</div>
+    {% endif %}
+    {%endif %}
+
+  </div>
+</div>
+
+<!-- begin page -->
+<div class="container animate">
+  <article class="page">
+    {{ content }}
+  </article>
+</div>
+<!-- end page -->

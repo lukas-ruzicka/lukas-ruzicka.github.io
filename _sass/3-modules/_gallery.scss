@@ -1,0 +1,49 @@
+/* Gallery */
+.gallery-box {
+  margin: 32px -100px 32px -100px;
+
+  @media only screen and (max-width: $wide) {
+    margin: 32px -40px 32px -40px;
+  }
+
+  @media only screen and (max-width: $desktop) {
+    margin: 32px 0;
+  }
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: center;
+  align-content: center;
+  margin-left: -24px;
+  margin-bottom: -24px;
+
+  img {
+    margin-left: 24px;
+    margin-bottom: 24px;
+    width: calc(100% - 24px);
+  }
+
+  .gallery__image {
+    background: var(--background-color);
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+
+  @media only screen and (max-width: $desktop) {
+    margin-left: -12px;
+    margin-bottom: -12px;
+
+    img {
+      margin-left: 12px;
+      margin-bottom: 12px;
+      width: calc(100% - 12px);
+    }
+  }
+}

@@ -1,0 +1,70 @@
+<!-- begin header -->
+<header class="header">
+  <div class="container-big">
+    <div class="row">
+      <div class="header__inner col col-12">
+
+        <div class="logo">
+          <a class="logo__link" href="{{ site.baseurl }}/">
+          {% if site.data.settings.logo %}
+            <img class="logo__image" src="{{ site.baseurl }}{{ site.data.settings.logo }}" alt="{{ site.data.settings.title }}">
+          {% else %}
+            {{ site.data.settings.title }}
+          {% endif %}
+          </a>
+        </div>
+
+        <nav class="main-nav">
+          <div class="main-nav__box">
+            <ul class="nav__list list-reset">
+
+              {% for item in site.data.settings.menu__settings.menu__items %}
+                {% if item.submenu %}
+                <li class="nav__item dropdown">
+                  <span class="nav__link dropdown-toggle">{{ item.title }} <i class="ion ion-ios-arrow-down arrow-down"></i></span>
+                  <div class="dropdown-menu">
+                    {% for submenu-item in item.submenu %}
+                      <a href="{{ submenu-item.url }}" class="nav__link{% if page.url == submenu-item.url %} active-link{% endif %}">{{submenu-item.title}}</a>
+                    {% endfor %}
+                  </div>
+                </li>
+                {% else %}
+                <li class="nav__item">
+                  <a href="{{ item.url | relative_url }}" class="nav__link{% if page.url == item.url %} active-link{% endif %}">{{ item.title }}</a>
+                </li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          </div>
+        </nav>
+
+        <div class="nav-button">
+          <div class="hamburger">
+            <div></div>
+          </div>
+          {% if site.data.settings.color_scheme == "auto" %}
+          <div class="toggle-theme toggle-theme-js">
+            <span class="toggle-moon" title="Enable dark mode" aria-hidden="true"></span>
+            <span class="toggle-sun" title="Enable light mode" aria-hidden="true"></span>
+          </div>
+          {% elsif site.data.settings.color_scheme == "light" %}
+          <div class="toggle-theme theme-light">
+            <span class="toggle-sun" title="Light mode enabled" aria-hidden="true"></span>
+          </div>
+          {% elsif site.data.settings.color_scheme == "dark" %}
+          <div class="toggle-theme theme-dark">
+            <span class="toggle-moon" title="Dark mode enabled" aria-hidden="true"></span>
+          </div>
+          {% else %}
+          <div class="toggle-theme toggle-theme-js">
+            <span class="toggle-moon" title="Enable dark mode" aria-hidden="true"></span>
+            <span class="toggle-sun" title="Enable light mode" aria-hidden="true"></span>
+          </div>
+          {% endif %}
+        </div>
+
+      </div>
+    </div>
+  </div>
+</header>
+<!-- end header -->

@@ -1,0 +1,34 @@
+---
+layout: default
+title: Writing
+description: Akio blog features productivity, tips, inspiration and strategies for massive profits. Find out how to set up a successful blog or how to make yours even better!
+---
+
+<div class="container">
+  <div class="page-section-head">
+    <h1 class="page-title">{% if page.title %}{{ page.title }}{% else %}{{ site.data.settings.blog__settings.blog__title }}{% endif %}</h1>
+    {% if page.description %}
+      <p class="page-description">{{ page.description }}</p>
+    {% else site.data.settings.blog__settings.blog__description %}
+      <p class="page-description">{{ site.data.settings.blog__settings.blog__description }}</p>
+    {% endif %}
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col col-12">
+      <div class="section-small">
+        <div class="section__inner grid">
+          {% if site.posts.size > 0 %}
+            {% for post in paginator.posts offset:0 %}
+              {% include article.html %}
+            {% endfor %}
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% include pagination.html %}
