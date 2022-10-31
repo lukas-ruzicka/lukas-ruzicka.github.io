@@ -44,7 +44,7 @@
   position: relative;
   z-index: 1;
   display: flex;
-  max-width: 780px;
+  max-width: 554px;
   margin: 0 auto;
   text-align: center;
   color: var(--light-gray);
@@ -67,7 +67,7 @@
 .footer__author-bio {
   margin-bottom: 0;
   font-size: 20px;
-  opacity: .6;
+  opacity: .7;
 
   @media (max-width: $desktop) {
     font-size: inherit;
@@ -81,6 +81,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .social__list__end {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
     flex-wrap: wrap;
   }
 

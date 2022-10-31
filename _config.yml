@@ -1,7 +1,7 @@
 #-------------------------------
 # General Site Settings
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://lukas.ruzicka.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 
 #-------------------------------
@@ -28,6 +28,9 @@ collections:
   works:
     output: true
     permalink: /work/:slug
+  owns:
+    output: true
+    permalink: /own/:slug
 
 # Pages Path
 defaults:
@@ -48,6 +51,11 @@ defaults:
   - scope:
       path: ""
       type: "works"
+    values:
+      layout: "work"
+  - scope:
+      path: ""
+      type: "owns"
     values:
       layout: "work"
 

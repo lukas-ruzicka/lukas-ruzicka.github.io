@@ -29,8 +29,14 @@ layout: default
           <p class="page-description">{{ page.description }}</p>
           {% endif %}
           <ul class="work-meta list-reset">
-            {% if page.date %}
-            <li class="work-meta__item"><strong>Date:</strong> <span>{{ page.date | date_to_string }}</span></li>
+            {% if page.from %}
+            <li class="work-meta__item"><strong>Date:</strong> 
+              <span>
+                {{ page.from | date: "%B %Y" }}
+                {% if page.to %}
+                - {{ page.to | date: "%B %Y" }}
+                {% endif %}
+              </span></li>
             {% endif %}
             {% if page.client %}
             <li class="work-meta__item"><strong>Client:</strong> <span>{{ page.client }}</span></li>
@@ -39,6 +45,22 @@ layout: default
             <li class="work-meta__item"><strong>Role:</strong> <span>{{ page.role }}</span></li>
             {% endif %}
           </ul>
+          {% if page.appstore_link %}
+          <br>
+          <a href="{{ page.appstore_link }}" class="appstore__link" rel="noopener">
+            <img class="lazy" data-src="/images/appstore-light.svg" alt="App Store link">
+          </a>
+          {% endif %}
+          {% if page.github_link %}
+          <div class="social">
+            <ul class="social__list__end list-reset">
+              <li class="social__item">
+                <a class="social__link" href="{{ page.github_link }}" target="_blank" rel="noopener"
+                  aria-label="GitHub link"><i class="ion ion-logo-github"></i></a>
+              </li>
+            </ul>
+          </div>
+          {% endif %}
         </div>
       </div>
     </div>

@@ -1,0 +1,40 @@
+---
+layout: default
+title: Own projects
+description: Here are the projects I've done on my own.
+---
+
+<div class="container">
+  <div class="page-section-head">
+    <h1 class="page-title">{% if page.title %}{{ page.title }}{% else %}{{ site.data.settings.own.own__title }}{% endif %}</h1>
+    {% if page.description %}
+      <p class="page-description">{{ page.description }}</p>
+    {% else site.data.settings.own.own__description %}
+      <p class="page-description">{{ site.data.settings.own.own__description }}</p>
+    {% endif %}
+  </div>
+</div>
+
+<div class="work-page container animate">
+  <div class="row">
+    {% assign sorted = site.owns | sort: 'from' | reverse %}
+    {% for own in sorted %}
+      <article class="work col col-4 col-d-6 col-t-12">
+        <div class="work__content">
+          <a href="{{ own.url }}" class="work__image">
+            <img class="lazy" data-src="{{ own.image }}" alt="{{ own.title }}">
+          </a>
+          <div class="work__info">
+            {% if own.category %}
+            <div class="work__category">{{ own.category }}</div>
+            {% endif %}
+            <h3 class="work__title"><a href="{{ own.url }}">{{ own.title }}</a></h3>
+            {% if own.description %}
+            <p class="work__description">{{ own.description }}</p>
+            {% endif %}
+          </div>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</div>

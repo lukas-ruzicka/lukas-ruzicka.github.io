@@ -1,9 +1,9 @@
 #-------------------------------
 # Site Settings
-title: Akio
+title: Lukas Ruzicka
 logo: # You can add own logo. For example '/images/logo.png'.
-description: Creative Portfolio Theme for Jekyll.
-color_scheme: auto # You can choose three modes auto, light, and dark. By default, the auto mode is set, which means the user can choose the light or dark mode themself.
+description: My personal portfolio website.
+color_scheme: dark # You can choose three modes auto, light, and dark. By default, the auto mode is set, which means the user can choose the light or dark mode themself.
 
 
 #-------------------------------
@@ -12,34 +12,36 @@ menu__settings:
   menu__items:
     - title: 'Home'
       url: '/'
-    - title: 'About'
+    - title: 'About me'
       url: '/about/'
-    - title: 'Work'
-      url: '/work/'
-    - title: 'Writing'
-      url: '/blog/'
-    - title: 'Pages'
+    - title: 'My career'
+      url: '/career/'
+    - title: 'Tech Stack'
+      url: '/techstack/'
+    - title: 'References'
       submenu:
-      - url: '/contact/'
-        title: 'Contact'
-      - url: '/elements/'
-        title: 'Elements'
+      - url: '/work/'
+        title: 'Works'
+      - url: '/own/'
+        title: 'Own projects'
+    - title: 'Articles'
+      url: '/blog/'
+    - title: 'Contact'
+      url: '/contact/'
 
 
 #-------------------------------
 # Author Settings
 author:
-  author__name: Jason Hill
-  author__bio: Hi, I'm Jason – Graphic Designer. I'm a creative and curious person who has a lot of experience and fond moments working with design, websites, and marketing.
-  author__avatar: '/images/01.jpg'
+  author__name: Lukas Ruzicka
+  author__bio: Senior iOS developer 🍏, living in Prague, Czech Republic 🇨🇿
+  author__avatar: '/images/portraits/megu-head-square.jpg'
 
 social:
-- {icon: "ion-logo-twitter", link: "https://twitter.com"}
-- {icon: "ion-logo-facebook", link: "https://facebook.com"}
-- {icon: "ion-logo-instagram", link: "https://instagram.com"}
-- {icon: "ion-logo-pinterest", link: "https://pinterest.com"}
-- {icon: "ion-logo-github", link: "https://github.com"}
-- {icon: "ion-logo-vimeo", link: "https://vimeo.com"}
+- {icon: "ion-logo-github", link: "https://github.com/lukas-ruzicka"}
+- {icon: "ion-logo-linkedin", link: "https://www.linkedin.com/in/lruzicka96/"}
+- {icon: "ion-logo-instagram", link: "https://www.instagram.com/ruzickalukas96/"}
+- {icon: "ion-logo-twitter", link: "https://twitter.com/ruzickalukas96"}
 
 # Example of adding a new link to the footer - {icon: "ion-logo-dribbble", link: "https://dribbble.com"}
 # Other icons can be found at https://ionicons.com/v4/
@@ -49,57 +51,48 @@ social:
 # Hero Settings
 hero:
   enable: true
-  hero__title: Hey everyone, I’m Jason Hill
-  hero__description: Hi, I'm Jason – Graphic Designer. I'm a creative and curious person who has a lot of experience and fond moments working with design, websites, and marketing.
-  hero__image: "/images/01-1.jpg"
+  hero__title: Lukas Ruzicka, the iOS developer 
+  hero__description: "I'm Lukas, a **senior iOS developer** 🍏, living in **Prague, Czech Republic** 🇨🇿. I'm grateful to be able to use my **creative skills** to contribute to **making the world a better place** ✨. Being around people who are **passionate** about their daily work and **want to make an impact** is something **I love most** about this industry 💜."
+  hero__image: "/images/portraits/studio-portrait-cropped.jpg"
 
 
 #-------------------------------
 # Logos Settings
 logos:
   enable: true
-  logos__title: I’ve worked with some great сompanies
+  logos__title: Companies I've had the pleasure to work with
 
 logo__items:
-  - name: Google
-    link: "https://www.google.com/"
-    image: "/images/google.svg"
+  - name: MeguMethod
+    link: "https://www.megumethod.com/"
+    image: "/images/companies/megumethod.svg"
 
-  - name: Spotify
-    link: "https://www.spotify.com/"
-    image: "/images/spotify.svg"
+  - name: tado°
+    link: "https://www.tado.com/"
+    image: "/images/companies/tado.svg"
 
-  - name: Pinterest
-    link: "https://www.pinterest.com/"
-    image: "/images/pinterest.svg"
+  - name: Synetech
+    link: "https://synetech.cz/"
+    image: "/images/companies/synetech.svg"
 
-  - name: Netlify
-    link: "https://www.netlify.com/"
-    image: "/images/netlify.svg"
-
-  - name: Apple
-    link: "https://www.apple.com/"
-    image: "/images/apple.svg"
-
-  - name: Adobe
-    link: "https://www.adobe.com/"
-    image: "/images/adobe.svg"
-
-#-------------------------------
-# Newsletter
-mailchimp:
-  enable: true
-  mailchimp__identifier: frnla.us6.list-manage.com/subscribe/post?u=6314d69a3f315af7ce3fb00a0&amp;id=3038727cc3 # Add your MailChimp form identifier. For example - frnla.us6.list-manage.com/subscribe/post?u=6314d69a3f315af7ce3fb00a0&amp;id=3038727cc3
-  mailchimp__input__text: Your email address...
-  mailchimp__button__text: Subscribe
+  - name: SpaceKnow
+    link: "https://spaceknow.com/"
+    image: "/images/companies/spaceknow.svg"
 
 
 #-------------------------------
 # Work Settings
 work:
   enable: true
-  work__title: Work
-  work__description: I shows only the best websites and portfolios built completely with passion, simplicity & creativity!
+  work__title: References
+  work__description: Some of the interesting projects and other initiatives I have worked on over the years.
+
+#-------------------------------
+# Own projects Settings
+own:
+  enable: true
+  own__title: Own projects
+  own__description: Here are the projects I've done on my own.
 
 
 #-------------------------------
@@ -107,64 +100,29 @@ work:
 testimonials:
   enable: true
 
-testimonial__title: Clients
-testimonial__description:
+testimonial__title: Recommendations
+testimonial__description: 
 
 testimonial__items:
-  - name: "Hanna Septimus"
-    image: "/images/client-1.jpg"
-    designation: "Product Designer"
-    link: "https://twitter.com/"
-    content : "Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration"
+  - name: "Daniel Rutkovsky"
+    image: "/images/recommendations/daniel-rutkovsky.jpg"
+    designation: "CTO & Co-Founder at MeguMethod"
+    link: "https://www.linkedin.com/in/daniel-rutkovsky/"
+    content: "I've started working with Lukas almost 5 years ago. He came as a skilled medior to our team. He worked on many projects and his skills grew blazingly fast. He soon started leading our projects and focusing on AR development."
+    content_second_paragraph: "As he became senior developer Lukas took on more responsibilities and led our iOS team (house in our jargon) for the last two years. During this time his team grew and became the best-managed team in our company."
+    content_third_paragraph: "Not only that Lukas has great management skills, he's also an excellent developer. He was our iOS tech guru and author of many internal libraries and architecture patterns, that we use on our projects today. He has deep knowledge of Clean architecture, SPM (swift package manager) and SwiftUI."
 
-  - name: "Carla Rosser"
-    image: "/images/client-2.jpg"
-    designation: "Statistician"
-    link: "https://facebook.com/"
-    content : "Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration"
+  - name: "Tomas Novotny"
+    image: "/images/recommendations/tomas-novotny.jpg"
+    designation: "iOS Tech Lead at SYNETECH"
+    link: "https://www.linkedin.com/in/tom-nvt/"
+    content: "From the beginning of our cooperation about 4 years ago, Lukáš was one of the most helpful and supportive colleagues on the team. He guided me in my first steps in Synetech and also in Synetech's biggest project, on which we worked together. It was an honor to work with Lukáš and see him grow in both technical and soft skills. He is always open to finding out ways to improve himself as well as the well-being of the whole team. Besides being a great iOS engineer, who is able to cope with any technical challenge, he is also experienced in managerial roles as he can find the balance between the needs of the company and the iOS team and be a great delegate for the team."
 
-  - name: "Maria Curtis"
-    image: "/images/client-3.jpg"
-    designation: "Team Lead"
-    link: "https://twitter.com/"
-    content : "Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration"
-
-  - name: "Carter Bergson"
-    image: "/images/client-4.jpg"
-    designation: "CEO, Founder"
-    link: "https://facebook.com/"
-    content : "Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration"
-
-  - name: "Jordyn Franci"
-    image: "/images/client-5.jpg"
-    designation: "Personal Trainer"
-    link: "https://twitter.com/"
-    content : "Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration"
-
-  - name: "Mira Carder"
-    image: "/images/client-6.jpg"
-    designation: "Data Scientist"
-    link: "https://facebook.com/"
-    content : "Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration"
-
-  - name: "Madelyn Herwitz"
-    image: "/images/client-7.jpg"
-    designation: "Frontend Engineer"
-    link: "https://twitter.com/"
-    content : "Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration"
-
-  - name: "Anika Schleifer"
-    image: "/images/client-8.jpg"
-    designation: "Fitness Director"
-    link: "https://facebook.com/"
-    content : "Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration"
-
-  - name: "Wilson Dorwart"
-    image: "/images/client-9.jpg"
-    designation: "Financial Manager"
-    link: "https://twitter.com/"
-    content : "Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration"
-
+  - name: "Niklas Astrom"
+    image: "/images/recommendations/niklas-astrom.jpg"
+    designation: "Engineering Manager at tado°"
+    link: "https://www.linkedin.com/in/niklasastrom/"
+    content: "Lukáš’ knowledge and skills as well as willingness to help makes me happy I got the chance to work together with him! During the year we worked together, he not only delivered high quality software, but he was also always there to help others with everything from pair programming to discussing technical solutions and team improvements. He is a strong team player and someone I could trust and count on. I'm happy that I got to know him, and I'm sure he will do great in his upcoming adventures!"
 
 #-------------------------------
 # Blog Section
@@ -172,31 +130,29 @@ blog:
   enable: true
 
 blog__settings:
-  blog__title: Writing
-  blog__description:
+  blog__title: Articles
+  blog__description: I'm not a blogger, but here you can find a few things I thought deserved to be written down.
 
 
 #-------------------------------
 # Footer Settings
-footer__background__image: "/images/bg.jpg"
+footer__background__image: "/images/footer-bg.jpg"
+
 
 #-------------------------------
 # Contact Settings
 contact:
-  email: your@email.com # Add your form_id
-  description: Akio comes with a built-in contact form, that you can use with Formspree service to handle up to 50 submissions per month for free. You could also easily switch to another contact form service if you want. # Add a description of your form
-
-# NOTE
-# Akio theme comes with a contact form built-in. You can use this form with Formspree (https://formspree.io/) service and get up to 50 submissions for free. Also, you can easily switch to another service if you want.
+  email: xqkjyrbe # Formspree (https://formspree.io/) form id
+  description: Any questions about anything I've been working on? Do you have a project that you think I might like and could possibly be involved in? Let me know!
 
 
 #-------------------------------
 # Comment Section (Disqus)
 disqus:
-  enable: true
+  enable: false
   disqus__identifier: anvod-studio-test # Add your shortname for Disqus Comment. For example anvod-studio-test
 
 
 #-------------------------------
 # Google Analytics
-google-analytics: # Add your GA Tracking Id
+google-analytics: G-0LJ5CLHSWF

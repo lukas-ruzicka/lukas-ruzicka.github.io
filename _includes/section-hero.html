@@ -12,7 +12,7 @@
           </div>
           {% endif %}
           <h1 class="hero__title">{{ site.data.settings.hero.hero__title }}</h1>
-          <p class="hero__description">{{ site.data.settings.hero.hero__description }}</p>
+          <p class="hero__description">{{ site.data.settings.hero.hero__description | markdownify }}</p>
 
           {% if site.data.settings.mailchimp.enable == true %}
           <div class="hero__subscribe">

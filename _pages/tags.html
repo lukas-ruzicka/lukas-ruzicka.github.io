@@ -12,12 +12,12 @@ permalink: /tags/
   {% for item in (0..site.tags.size) %}{% unless forloop.last %}
   {% capture this_word %}{{ tag_words[item] | strip_newlines }}{% endcapture %}
 
-    <div class="tags__inner is-hidden" id="{{ this_word | cgi_escape }}">
+    <div class="tags__inner is-hidden" id="{{ this_word | cgi_escape | replace: '+', '' }}">
 
       <div class="container">
         <div class="tag__info">
           <h1 class="tag__name">{{ this_word }} <span class="tag__counter">{{ site.tags[this_word].size }}</span></h1>
-          <div class="tag__link">Check out the <a href="{{ '/blog' | relative_url }}">latest posts</a></div>
+          <div class="tag__link">Check out the <a href="{{ '/blog' | relative_url }}">latest articles</a></div>
         </div>
       </div>
 
@@ -46,7 +46,7 @@ permalink: /tags/
 <!-- end tags -->
 
 <script>
-  var tag_name = window.location.search.replace("?tag=", "#");
+  var tag_name = window.location.search.replace("?tag=", "#").replace('+', '');
   if (tag_name) {
       var el = document.querySelector(tag_name);
       el.classList.remove("is-hidden");

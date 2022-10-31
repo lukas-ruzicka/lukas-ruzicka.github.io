@@ -40,7 +40,19 @@
                 </div>
               </div>
               {% if testimonial__item.content %}
-                <p class="client-text">{{ testimonial__item.content }}</p>
+                <p class="client-text">
+                  {{ testimonial__item.content }}
+                </p>
+                {% if testimonial__item.content_second_paragraph %}
+                <p class="client-text-continuation">
+                  {{ testimonial__item.content_second_paragraph }}
+                </p>
+                {% endif %}
+                {% if testimonial__item.content_third_paragraph %}
+                <p class="client-text-continuation">
+                  {{ testimonial__item.content_third_paragraph }}
+                </p>
+                {% endif %}
               {% endif %}
             </div>
           </div>

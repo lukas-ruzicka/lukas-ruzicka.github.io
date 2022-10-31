@@ -36,6 +36,15 @@
   }
 }
 
+.appstore__link {
+  display: block;
+  transition: all .2s ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
 .dark-mode {
   .logos__image {
     filter: invert(100%) sepia(32%) saturate(304%) hue-rotate(200deg) brightness(115%) contrast(88%);

@@ -173,8 +173,6 @@
   }
 
   @media (max-width: $desktop) {
-    aspect-ratio: 1/1;
-
     @supports not (aspect-ratio: 1/1) {
       padding-bottom: 100%;
     }

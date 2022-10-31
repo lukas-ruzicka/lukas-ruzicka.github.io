@@ -1,7 +1,7 @@
 ---
 layout: default
-title: My work
-description: I shows only the best websites and portfolios built completely with passion, simplicity & creativity!
+title: References
+description: Some of the interesting projects and other initiatives I have worked on over the years.
 ---
 
 <div class="container">
@@ -17,7 +17,8 @@ description: I shows only the best websites and portfolios built completely with
 
 <div class="work-page container animate">
   <div class="row">
-    {% for work in site.works reversed %}
+    {% assign sorted = site.works | sort: 'to' | reverse %}
+    {% for work in sorted %}
       <article class="work col col-4 col-d-6 col-t-12">
         <div class="work__content">
           <a href="{{ work.url }}" class="work__image">
