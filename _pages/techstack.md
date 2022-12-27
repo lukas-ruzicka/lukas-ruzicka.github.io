@@ -36,7 +36,7 @@ Glad to be able to use the nicely readable **Swift concurrency** (`async/await`)
 
 Have participated in introducing of own architecture (in SYNETECH) based on the **clean architecture** with modular presentation modules mainly inspired by **VIPER**. The architecture was quite robust, as the intention was to have one architecture for all types of projects that we've worked on in the company.
 
-> Have described the advantages of the clean architecture in the mobile apps environment in the article [_Example usage of the clean architecture_](blog/clean-architecture-example).
+> Have described the advantages of the clean architecture in the mobile apps environment in the article [_Example usage of the clean architecture_](../blog/clean-architecture-example).
 
 Used the [Swinject framework](https://github.com/Swinject/Swinject) for dependency injection 💉, but also have tried (and probably liked more) a more lighterweight framework [Resolver](https://github.com/hmlongco/Resolver).
 
