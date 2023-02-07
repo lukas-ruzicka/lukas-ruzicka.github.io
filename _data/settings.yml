@@ -34,7 +34,7 @@ menu__settings:
 # Author Settings
 author:
   author__name: Lukas Ruzicka
-  author__bio: Senior iOS developer 🍏, living in Prague, Czech Republic 🇨🇿
+  author__bio: iOS engineer 🍏, living in Prague, Czech Republic 🇨🇿
   author__avatar: '/images/portraits/megu-head-square.jpg'
 
 social:
@@ -51,8 +51,8 @@ social:
 # Hero Settings
 hero:
   enable: true
-  hero__title: Lukas Ruzicka, the iOS developer 
-  hero__description: "I'm Lukas, a **senior iOS developer** 🍏, living in **Prague, Czech Republic** 🇨🇿. I'm grateful to be able to use my **creative skills** to contribute to **making the world a better place** ✨. Being around people who are **passionate** about their daily work and **want to make an impact** is something **I love most** about this industry 💜."
+  hero__title: Lukas Ruzicka, the iOS engineer 
+  hero__description: "I'm Lukas, an **iOS engineer** 🍏, living in **Prague, Czech Republic** 🇨🇿. I'm grateful to be able to use my **creative skills** to contribute to **making the world a better place** ✨. Being around people who are **passionate** about their daily work and **want to make an impact** is something **I love most** about this industry 💜."
   hero__image: "/images/portraits/studio-portrait-cropped.jpg"
 
 
@@ -63,6 +63,10 @@ logos:
   logos__title: Companies I've had the pleasure to work with
 
 logo__items:
+  - name: endavu
+    link: "https://www.endavu.com"
+    image: "/images/companies/endavu.svg"
+  
   - name: MeguMethod
     link: "https://www.megumethod.com/"
     image: "/images/companies/megumethod.svg"
